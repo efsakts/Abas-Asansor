@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Woody - Carpenter Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <div id="topbar_navbar"></div>
+    <script>
+        fetch('topbar_navbar.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('topbar_navbar').innerHTML = data;
+    });
+    </script>
+
+    
+
+    
+    
+    <div class="whatsapp-container">
+        <!-- WhatsApp mesaj gönderme butonu -->
+        <a href="https://wa.me/+905394510382?text=Merhaba, yardıma ihtiyacım var." class="whatsapp-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+        </a>
+        
+        <!-- Telefon arama butonu -->
+        <a href="tel:+9053945103821" class="call-button">
+            <img src="img/telicon.jpeg" alt="Ara">
+        </a>
+    </div>
+    
+    <style>
+        /* Sağda sabit duran butonlar */
+        .whatsapp-container {
+            position: fixed;
+            bottom: 120px;
+            right: 40px;
+            z-index: 1000;
+        }
+    
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            width: 60px;
+            height: 60px;
+            justify-content: center;
+            text-align: center;
+        }
+    
+        .whatsapp-button img {
+            width: 35px;
+            height: 35px;
+        }
+    
+        .call-button {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 60px;
+            height: 60px;
+            justify-content: center;
+            text-align: center;
+        }
+    
+        .call-button img {
+            width: 35px;
+            height: 35px;
+            
+        }
+    </style>
+    
+    
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img src="img/Escalator.jpg" alt="Carousel Image" style="width: 1600px; height: 700px;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Abaş Asansör’e Hoşgeldİnİz</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">45 Yılı Aşkın Sektör Deneyimi</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Abaş Asansör olarak uzun yıllardır bu sektördeki uzmanlığımızı sizlerin ihtiyaçlarına uygun çözümler ile buluşturuyoruz. Karar vermeden önce mutlaka bize ulaşın.</p>
+                                <a href="yurmerdiven.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Yürüyen Merdiven</a>
+                                <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img src="img/asansor_yeni.jpg" alt="Carousel Image" style="width: 1600px; height: 700px;">
+
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Abaş Asansör’e Hoşgeldİnİz</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Uzman Kadro, Deneyimli Servis</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Abaş Asansör olarak uzun yıllardır bu sektördeki uzmanlığımızı sizlerin ihtiyaçlarına uygun çözümler ile buluşturuyoruz. Karar vermeden önce mutlaka bize ulaşın.</p>
+                                <a href="asansorler.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Asansörler</a>
+                                <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img src="img/disabled_elev_stock.jpg" alt="Carousel Image" style="width: 1600px; height: 700px;">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Abaş Asansör’e Hoşgeldİnİz</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Engelleri Ortadan Kaldıran Çözümler</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Abaş Asansör olarak uzun yıllardır bu sektördeki uzmanlığımızı sizlerin ihtiyaçlarına uygun çözümler ile buluşturuyoruz. Karar vermeden önce mutlaka bize ulaşın.</p>
+                                <a href="engelsizcozumler.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Engelsiz Çözümler</a>
+                                <!-- <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                            <i class="fa fa-user-check fa-2x text-primary"></i>
+                        </div>
+                        <h1 class="display-1 text-light mb-0">01</h1>
+                    </div>
+                    <h5>Uzman Kadro</h5>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                            <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+                        </div>
+                        <h1 class="display-1 text-light mb-0">02</h1>
+                    </div>
+                    <h5>Kaliteli Ürünler</h5>
+                </div>  
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                            <i class="fa fa-check fa-2x text-primary"></i>
+                        </div>
+                        <h1 class="display-1 text-light mb-0">03</h1>
+                    </div>
+                    <h5>Güleryüzlü Servis</h5>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
+                            <i class="fa fa-smile fa-2x text-primary"></i>
+                        </div>
+                        <h1 class="display-1 text-light mb-0">04</h1>
+                    </div>
+                    <h5>Müşteri Memnuniyeti</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature Start -->
+
+  
+
+
+    <!-- About Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/hakkimizda.jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 pe-lg-0">
+                        
+                            <h1 class="display-5 mb-4">Hakkımızda</h1>
+                        
+                        <p class="mb-4 pb-2"> Abaş Asansör, 1 Ocak 1979 tarihinden bugüne kaliteli ürün çeşitliliği ve servisleriyle Türkiye ve bölgesinde önemli bir yerdedir. 
+                            Müşterilerimizin ihtiyaçlarına uygun kapasite, hız ve özellikte şahıs / yük / servis / oto / hasta / engelli ve panaromik tip elektrikli ve/veya hidrolik tahrikli asansörlerin ve platformların kurulumları, yenilenmesi ve servis sonrası bakımlarını uzman teknik kadrosu ile en iyi şekilde yürütmektedir. 
+                            </p>
+                        <div class="row g-4 mb-4 pb-2">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-users fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h2 class="text-primary mb-1 counter" data-target="500">0</h2>
+                                        <p class="fw-medium mb-0">Memnun Müşteriler</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-check fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-3">
+                                        <h2 class="text-primary mb-1 counter" data-target="850">0</h2>
+                                        <p class="fw-medium mb-0">Tmamlanan Projeler</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/about.html" class="btn btn-primary py-3 px-5">Daha Fazlası</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const counters = document.querySelectorAll('.counter');
+    
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                let count = +counter.innerText;
+    
+                const increment = target / 100;
+    
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 10); // adjust speed if needed
+                } else {
+                    counter.innerText = target + '+';
+                }
+            };
+    
+            updateCount();
+        });
+    </script>
+    
+    <!-- About End -->
+
+   
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            
+                <h1 class="display-5 mb-5">Servisler</h1>
+            
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/YeniAsansorKurulumu2.jpg" alt="" style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="p-4 text-center border border-5 border-light border-top-0">
+                                <h4 class="mb-3">Yeni Asansör Kurulumu</h4>
+                                <p>Yeni asansör kurulumu, bina yapısına ve kullanım amacına uygun olarak en verimli ve güvenli taşıma sisteminin tasarlanması ve montajının gerçekleştirilmesidir.</p>
+                                <a class="fw-medium" href="yeniasansorkurulumu.html">Daha Fazlası<i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/Mevcutasansoryenileme.jpg" alt="" style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="p-4 text-center border border-5 border-light border-top-0">
+                                <h4 class="mb-3">Mevcut Asansör Yenileme</h4>
+                                <p>Zamanla eskiyen veya teknolojik olarak yetersiz kalan asansörlerin modernize edilmesi sürecidir.</p>
+                                <a class="fw-medium" href="mevcutasansoryenileme.html">Daha Fazlası<i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="img/bakimveonarim.jpg" alt="" style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="p-4 text-center border border-5 border-light border-top-0">
+                                <h4 class="mb-3">Bakım ve Onarım</h4>
+                                <p>Asansörlerin güvenli ve sorunsuz çalışabilmesi için periyodik aralıklarla bakım ve onarım işlemlerinin yapılması faaliyetleridir.</p>
+                                <a class="fw-medium" href="bakımveonarım.html">Daha Fazlası<i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 ps-lg-0">
+                        
+                            <h1 class="display-5 mb-4">Neden Biz?</h1>
+                        
+                        
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-trophy fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        
+                                        <h5 class="mb-0">45 yılı aşkın sektör tecrübesi</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-cogs fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        
+                                        <h5 class="mb-0">Kaliteli ve uzun ömürlü malzeme tercihi</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-phone fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        
+                                        <h5 class="mb-0">Kesintisiz hizmet</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-suitcase fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        
+                                        <h5 class="mb-0">Geniş yedek parça stoğu</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-wrench fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        
+                                        <h5 class="mb-0">Satış sonrası bakım ve destek</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                        <i class="fa fa-rocket fa-2x text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        
+                                        <h5 class="mb-0">Gelişen teknolojiye uyum</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/NedenBiz.jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            
+                <h1 class="display-5 mb-5">Projeler</h1>
+           
+            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-12 text-center">
+                    <ul class="list-inline mb-5" id="portfolio-flters">
+                        <li class="mx-2 active" data-filter="*">Tümü</li>
+                        <li class="mx-2" data-filter=".first">Asansörler</li>
+                        <li class="mx-2" data-filter=".second">Engelsiz Çözümler</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/PA4_HillSide-İkonBahce.JPG" alt="">
+                            <div class="portfolio-overlay">
+                            <!--   <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a> -->
+                                <a class="btn btn-square btn-outline-light mx-1" href="asansorler-projeler.html"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Asansörler</p>
+                            <h5 class="lh-base mb-0">Öztaş İnşaat - Hillside Projesi Şahıs Asansörü</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/PA2_LabrandaHotel_1.jpg" alt="">
+                            <div class="portfolio-overlay">
+                            <!--   <a class="btn btn-square btn-outline-light mx-1" href="img/PA2_LabrandaHotel_1.jpg" data-lightbox="PA2_LabrandaHotel"><i class="fa fa-eye"></i></a> --> 
+                                <a class="btn btn-square btn-outline-light mx-1" href="asansorler-projeler.html"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Asansörler</p>
+                            <h5 class="lh-base mb-0">Labranda Otel Şahıs Asansörleri</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/DVS4.jpg" alt="">
+                            <div class="portfolio-overlay">
+                              <!--  <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a> -->
+                                <a class="btn btn-square btn-outline-light mx-1" href="asansorler-projeler.html"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Asansörler</p>
+                            <h5 class="lh-base mb-0">DVS İplik Fabrikası Şahıs ve Yük Asansörü</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/raufkanar1.jpg" alt="">
+                            <div class="portfolio-overlay">
+                               <!-- <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a> -->
+                                <a class="btn btn-square btn-outline-light mx-1" href="engelsizcozumler-projeler.html"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Engelsiz Çözümler</p>
+                            <h5 class="lh-base mb-0">Rauf K. Villası</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/turkanhanim1.jpg" alt="">
+                            <div class="portfolio-overlay">
+                              <!-- <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>  --> 
+                                <a class="btn btn-square btn-outline-light mx-1" href="engelsizcozumler-projeler.html"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Engelsiz Çözümler</p>
+                            <h5 class="lh-base mb-0">Türkan A. Konutu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/istasyon1.jpg" alt="">
+                            <div class="portfolio-overlay">
+                              <!--  <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>  -->
+                                <a class="btn btn-square btn-outline-light mx-1" href="engelsizcozumler-projeler.html"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Engelsiz Çözümler</p>
+                            <h5 class="lh-base mb-0">Kuşadası Belediyesi Eğitim Merkezi </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+
+    
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            
+                <h1 class="display-5 mb-5">Müşteri Geri Bildirimleri</h1>
+            
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item text-center">
+                    <i class="fa fa-user mb-2"></i>
+                    <div class="testimonial-text text-center p-4">
+                        
+                        <p>Apartmanımızın asansör arızası için yardım aldık. Mükemmel iletişim, işinde uzman ekip çok yardımcı oldular. Çok teşekkür ediyoruz.</p>
+                        <h5 class="mb-1">Zeynep H.</h5>
+                        
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <i class="fa fa-user mb-2"></i>
+                    <div class="testimonial-text text-center p-4">
+                        <p>Abaş asansörden çok memnunuz güler yüzlü personeli ve müşterilerine karşı ilgi alaka ve asansörlere anında müdahale konusunda çok iyiler.</p>
+                        <h5 class="mb-1">Hüseyin E.</h5>
+                        
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <i class="fa fa-user mb-2"></i>
+                    <div class="testimonial-text text-center p-4">
+                        <p>Kalite ve güvenin adresi, çok memnun kaldık. Ofisteki arkadaşlar ve teknik ekip çok ilgiliydi.</p>
+                        <h5 class="mb-1">Tanyel K.</h5>
+                        
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <i class="fa fa-user mb-2"></i>
+                    <div class="testimonial-text text-center p-4">
+                        <p>On yıldır Abaş asansör tarafından kurulan ve servis bakımı yapılan asansör firması çalışanlarından ve büro personelinden memnunum çok ilgili ve bilgilendiriciler.</p>
+                        <h5 class="mb-1">Seyit A.</h5>
+                        
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <i class="fa fa-user mb-2"></i>
+                    <div class="testimonial-text text-center p-4">
+                        <p>Güvenli temiz işçilik ve garanti hizmet almak için en iyi adres teşekkürler.</p>
+                        <h5 class="mb-1">Hüseyin T.</h5>
+                        
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <i class="fa fa-user mb-2"></i>
+                    <div class="testimonial-text text-center p-4">
+                        <p>16 yıldır firma ile çalışmaktayız. Firmanın hizmetlerinden son derece memnunuz.</p>
+                        <h5 class="mb-1">Asil K.</h5>
+                        
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <i class="fa fa-user mb-2"></i>
+                    <div class="testimonial-text text-center p-4">
+                        <p>Aradığım her an ilgiyle karşılanıp çabucak hizmet aldığım bir firma. Personelden ve Hizmetlerinden çok memnunum. Gayet güvenilir. Tavsiye ediyorum.</p>
+                        <h5 class="mb-1">Birkan D.</h5>
+                        
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <i class="fa fa-user mb-2"></i>
+                    <div class="testimonial-text text-center p-4">
+                        <p>Abaş asansör ege bölgesinde en güvenilir asansör firması olaraktan görüyoruz.</p>
+                        <h5 class="mb-1">Osman Y.</h5>
+                        
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <i class="fa fa-user mb-2"></i>
+                    <div class="testimonial-text text-center p-4">
+                        <p>Güvenilir özverili işini ciddiyetle yapan ilkeleri olan bir firma, bugüne kadar ki hizmetlerinden dolayı tüm ekip çalışanlarına teşekkürler.</p>
+                        <h5 class="mb-1">Hakan B.</h5>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+   
+    <!-- sorular start -->
+    <div class="container my-5">
+        <h2 class="display-5 mb-5 text-dark text-center">Sıkça Sorulan Sorular</h2>
+        <div class="faq-section">
+            <!-- Question 1 -->
+            <div class="faq-item mb-3">
+                <h5 class="text-dark">Abaş Asansör olarak hangi bölgelere hizmet veriyorsunuz?</h5>
+                <p class="mb-4 pb-2">Aydın’ın Söke ve Kuşadası ilçeleri öncelikli olmak üzere, Didim, Germencik, Ortaklar ve çevre ilçelerinde hizmet vermekteyiz.</p>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="faq-item mb-3">
+                <h5 class="text-dark">Asansörlerin periyodik bakım ve kontrolleri ne sıklıkta yaptırılmalıdır?</h5>
+                <p class="mb-4 pb-2">YAsansörlerin güvenli bir şekilde çalışmasını sağlamak için aylık bakımlarının anlaşmalı olduğunuz yetkili asansör firması tarafından ve yıllık periyodik kontrollerinin A tipi muayene kuruluşları tarafından yapılması zorunludur. Yıllık periyodik kontroller sırasında aylık bakımdan mesul olan firma personeli de A tipi kuruluşa eşlik eder. 634 sayılı Kat Mülkiyeti Kanunu'nun 35. maddesi gereğince, bina yöneticileri bu bakımları yetkili firmalara yaptırmakla sorumludur.</p>
+            </div>
+    
+            <!-- Question 3 -->
+            <div class="faq-item mb-3">
+                <h5 class="text-dark">A tipi muayene kuruluşu nedir? Hangi kurum tarafından görevlendirilmiştir?</h5>
+                <p>
+                    Ülkemizde asansörlerin periyodik kontrolleri A Tipi Muayene Kuruluşları tarafından gerçekleştirilmektedir.<br>
+                    <br>
+                    A Tipi Muayene Kuruluşları, TS EN ISO/IEC 17020 standardına göre TÜRKAK tarafından akredite edildikten sonra<br>
+                    Sanayi ve Teknoloji Bakanlığı tarafından yetkilendirilen ve ilgili idare(ler) (Belediye veya İl Özel İdaresi) ile<br>
+                    protokol yaparak asansörlerin periyodik kontrollerini gerçekleştiren kuruluşlardır.<br>
+                    <br>
+                    Asansörlere ilişkin periyodik kontrollerin yılda en az 1 defa yaptırılması zorunludur.<br>
+                    Periyodik kontrol neticesinde asansörlere, A Tipi Muayene Kuruluşları tarafından<br>
+                    Yeşil, Mavi, Sarı ve Kırmızı renkte olmak üzere bilgi etiketleri yapıştırılmaktadır.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-4 text-start">
+            <a href="sorular.html" class="btn btn-primary px-4 py-2">Daha Fazla Soru </a>
+        </div>
+    </div>
+    
+    
+    
+    <!-- sorular end -->
+
+
+
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

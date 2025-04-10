@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Woody - Carpenter Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <div id="topbar_navbar"></div>
+    <script>
+        fetch('topbar_navbar.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('topbar_navbar').innerHTML = data;
+    });
+    </script>
+<!--
+
+
+-->
+<style>
+    .step-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background-color: #e0e0e0; /* açık gri */
+        color: #000; /* siyah yazı */
+        border-radius: 50%;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    ul li {
+        font-size: 1.1rem; /* ya da istersen px cinsinden: örn. 18px */
+        line-height: 1.6;
+    }
+</style>
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="display-5 mb-5">Mevcut Asansör Yenileme Aşamaları</h2>
+            <p style="font-size: 1.1rem;">Zamanla eskiyen veya teknolojik olarak yetersiz kalan asansörlerin modernize edilmesi, güvenlik ve konfor açısından büyük önem taşır. Mevcut asansörlerin motor, kontrol paneli, kabin iç tasarımı ve güvenlik sistemleri yenilenerek daha verimli ve enerji tasarruflu hale getirilir. Yenileme işlemi, binanın yapısına uygun olarak planlanır ve kullanıcıların kesintisiz hizmet almasını sağlamak için hızlı ve güvenli bir şekilde gerçekleştirilir.</p>
+        </div>
+        <div class="row g-5">
+            <div class="col-12">
+                <h3 class="fw-bold">
+                    <span class="step-badge">1</span> Mevcut Durum Analizi ve Değerlendirme
+                </h3>
+                <ul>
+                    <li>Asansörün mekanik ve elektronik bileşenleri detaylı olarak incelenir.</li>
+                    <li>Performans, güvenlik ve enerji verimliliği açısından değerlendirme yapılır.</li>
+                    <li>Bina yönetimi ve kullanıcı talepleri doğrultusunda yenileme planı oluşturulur.</li>
+                </ul>
+            </div>
+            
+            <div class="col-12">
+                <h3 class="fw-bold">
+                    <span class="step-badge">2</span> Yenileme Kapsamının Belirlenmesi
+                </h3>
+                <ul>
+                    <li>Asansör motoru, kontrol panelleri, kabin iç tasarımı, kapılar ve güvenlik sistemlerinin değiştirilip değiştirilmemesi belirlenir.</li>
+                    <li>Eski teknolojinin güncellenmesi için modernizasyon çözümleri planlanır (makine dairesiz motor, akıllı kontrol sistemleri vb.).</li>
+                </ul>
+            </div>
+            
+            <div class="col-12">
+                <h3 class="fw-bold">
+                    <span class="step-badge">3</span> Malzeme ve Ekipman Temini
+                </h3>
+                <ul>
+                    <li>Kullanılacak yeni bileşenler sipariş edilir ve bina yapısına uygun malzemeler seçilir.</li>
+                    <li>Yenilenecek parçaların montaj planı hazırlanır.</li>
+                </ul>
+            </div>
+            
+            <div class="col-12">
+                <h3 class="fw-bold">
+                    <span class="step-badge">4</span> Mekanik ve Elektrik Sistemlerinin Güncellenmesi
+                </h3>
+                <ul>
+                    <li>Aşınmış ve eskiyen raylar, motor ve kabin mekanizmaları değiştirilir veya bakımdan geçirilir.</li>
+                    <li>Elektrik tesisatı yenilenir, kontrol panelleri güncellenir.</li>
+                    <li>Acil durum sistemleri ve sensörler modern güvenlik standartlarına uygun hale getirilir.</li>
+                </ul>
+            </div>
+            
+            <div class="col-12">
+                <h3 class="fw-bold">
+                    <span class="step-badge">5</span> Test ve Güvenlik Kontrolleri
+                </h3>
+                <ul>
+                    <li>Asansörün tüm fonksiyonları test edilir, yük ve hız testleri gerçekleştirilir.</li>
+                    <li>Yangın, deprem ve acil durum senaryolarına karşı sistemlerin çalışırlığı kontrol edilir.</li>
+                    <li>Yönetmeliklere uygunluk değerlendirilir.</li>
+                </ul>
+            </div>
+            
+            <div class="col-12">
+                <h3 class="fw-bold">
+                    <span class="step-badge">6</span> Kullanıcı Bilgilendirme ve Teslim
+                </h3>
+                <ul>
+                    <li>Bina yönetimine ve kullanıcılarına yeni sistemin kullanımı hakkında bilgi verilir.</li>
+                    <li>Düzenli bakım planı oluşturularak asansör güvenli bir şekilde hizmete alınır.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- New Section End -->
+
+
+<div id="footer"></div>
+<script>
+    fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+    });
+</script>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

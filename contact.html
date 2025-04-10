@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Woody - Carpenter Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <div id="topbar_navbar"></div>
+    <script>
+        fetch('topbar_navbar.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('topbar_navbar').innerHTML = data;
+    });
+    </script>
+
+
+
+
+    <div class="container-fluid bg-light overflow-hidden px-lg-0" style="margin: 6rem 0;">
+        <div class="container contact px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <!-- Sağ tarafta harita ve şube seçim butonları -->
+                <div class="col-lg-6 order-lg-2 py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <div class="d-flex mb-3">
+                            <button class="btn btn-primary me-2" onclick="showMap('merkez')">Merkez Şube</button>
+                            <button class="btn btn-primary me-2" onclick="showMap('soke')">Söke Şubesi</button>
+                            <button class="btn btn-primary" onclick="showMap('kusadasi')">Kuşadası Şubesi</button>
+                        </div>
+                        <div id="map-container" class="mb-3">
+                            <iframe id="map" src="https://www.google.com/maps/embed/v1/place?q=Sazlı+Mah.+Hasan+Batur+sok.+E+blok+Sitesi+No:1-D++Söke/AYDIN&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" 
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div id="address-info">
+                            <strong>Adres:</strong> <span id="address">Sazlı Mah. Hasan Batur sok. E blok Sitesi No:1-D  Söke/AYDIN</span><br>
+                            <strong>Tel:</strong> <span id="phone">0 256 518 30 09</span><br>
+                            <strong>E-Mail:</strong> <span id="email">info@abasasansor.com</span><br>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Sol tarafta iletişim formu -->
+                
+                <div class="col-lg-6 order-lg-1 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <h1 class="text-center mb-4">Bize Ulaşın</h1>
+                        <form id="contactForm" action="https://formsubmit.co/ajax/efsaaktas@outlook.com" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                        <label for="name">İsim</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                        <label for="email">E-Mail</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                        <label for="subject">Konu</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px" required></textarea>
+                                        <label for="message">Mesaj</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Gönder</button>
+                                </div>
+                            </div>
+                        </form>
+                
+                        <!-- Success/Error Message -->
+                        <div id="responseMessage" style="display: none;"></div>
+                    </div>
+                </div>
+                
+                <script>
+                    // Add an event listener to handle form submission
+                    document.getElementById('contactForm').addEventListener('submit', function (event) {
+                        event.preventDefault(); // Prevent the default form submission
+                
+                        // Create a FormData object from the form
+                        let formData = new FormData(this);
+                
+                        // Send the form data using fetch with FormSubmit API
+                        fetch(this.action, {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())  // Parse the response as JSON
+                        .then(data => {
+                            if (data.success) {
+                                document.getElementById('responseMessage').innerHTML = 'Mesajınız başarıyla gönderildi!';
+                                document.getElementById('responseMessage').style.display = 'block';
+                                document.getElementById('responseMessage').style.color = 'green';
+                                document.getElementById('contactForm').reset(); // Reset the form after submission
+                            } else {
+                                document.getElementById('responseMessage').innerHTML = 'Bir hata oluştu, lütfen tekrar deneyin.';
+                                document.getElementById('responseMessage').style.display = 'block';
+                                document.getElementById('responseMessage').style.color = 'red';
+                            }
+                        })
+                        .catch(error => {
+                            document.getElementById('responseMessage').innerHTML = 'Bir hata oluştu, lütfen tekrar deneyin.';
+                            document.getElementById('responseMessage').style.display = 'block';
+                            document.getElementById('responseMessage').style.color = 'red';
+                        });
+                    });
+                </script>
+
+                
+
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showMap(branch) {
+            let data = {
+                'merkez': {
+                    'map': 'https://www.google.com/maps/embed/v1/place?q=Sazlı+Mah.+Hasan+Batur+sok.+E+blok+Sitesi+No:1-D++Söke/AYDIN&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8',
+                    'address': 'Sazlı Mah. Hasan Batur sok. E blok Sitesi No:1-D  Söke/AYDIN',
+                    'phone': '0 256 518 30 09',
+                    'email': 'info@abasasansor.com',
+                    
+                },
+                'soke': {
+                    'map': 'https://www.google.com/maps/embed/v1/place?q=Atatürk+Mah.+Aydın+Cd.+No:64/A+Söke/AYDIN&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8',
+                    'address': 'Atatürk Mah. Aydın Cd. No:64/A Söke/AYDIN',
+                    'phone': '0 531 911 04 00',
+                    'email': 'abasasansor@gmail.com',
+                    
+                },
+                'kusadasi': {
+                    'map': 'https://www.google.com/maps/embed/v1/place?q=Yat+Limanı+Karşısı+Kuşadası/AYDIN&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8',
+                    'address': 'Yat Limanı Karşısı Kuşadası/AYDIN',
+                    'phone': '0 531 911 04 00',
+                    'email': 'abasasansor@gmail.com',
+                    
+                }
+            };
+    
+            document.getElementById('map').src = data[branch].map;
+            document.getElementById('address').innerText = data[branch].address;
+            document.getElementById('phone').innerText = data[branch].phone;
+            document.getElementById('email').innerText = data[branch].email;
+            document.getElementById('navigation').href = data[branch].nav;
+        }
+    </script>
+    
+    
+    
+    
+
+
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
