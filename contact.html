@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Woody - Carpenter Website Template</title>
+    <title>Abaş Asansör</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -72,6 +72,7 @@
                         <div id="address-info">
                             <strong>Adres:</strong> <span id="address">Sazlı Mah. Hasan Batur sok. E blok Sitesi No:1-D  Söke/AYDIN</span><br>
                             <strong>Tel:</strong> <span id="phone">0 256 518 30 09</span><br>
+                            <strong>Mobil:</strong> <span id="phone">0 531 911 04 00</span><br>
                             <strong>E-Mail:</strong> <span id="email">info@abasasansor.com</span><br>
                             
                         </div>
@@ -166,6 +167,7 @@
                     'map': 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d197.1017092186209!2d27.4502692!3d37.7753352!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14beb0b23d824d5d%3A0xd1af4538c02f2ca5!2sAba%C5%9F%20Asans%C3%B6r%20-%20Merkez!5e0!3m2!1str!2str!4v1744371211912!5m2!1str!2str',
                     'address': 'Sazlı Mah. Hasan Batur sok. E blok Sitesi No:1-D  Söke/AYDIN',
                     'phone': '0 256 518 30 09',
+                    'mobil': '0 531 911 04 00',
                     'email': 'info@abasasansor.com',
                     
                 },
@@ -173,6 +175,7 @@
                     'map': 'https://www.google.com/maps/embed/v1/place?q=Atatürk+Mah.+Aydın+Cd.+No:64/A+Söke/AYDIN&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8',
                     'address': 'Atatürk Mah. Aydın Cd. No:64/A Söke/AYDIN',
                     'phone': '0 531 911 04 00',
+                    'mobil': '0 531 911 04 00',
                     'email': 'abasasansor@gmail.com',
                     
                 },
@@ -180,6 +183,7 @@
                     'map': 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d196.8438528470248!2d27.2645386!3d37.8719496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bea94af8f4af25%3A0x918e855c03d9dbf9!2zQWJhxZ8gQXNhbnPDtnI!5e0!3m2!1str!2str!4v1744371149191!5m2!1str!2str',
                     'address': 'Türkmen Mah, Atatürk Blv. Liman Apt (Yat Limanı Karşısı) 09400 Kuşadası/Aydın',
                     'phone': '0 531 911 04 00',
+                    'mobil': '0 531 911 04 00',
                     'email': 'abasasansor@gmail.com',
                     
                 }
@@ -188,7 +192,8 @@
             document.getElementById('map').src = data[branch].map;
             document.getElementById('address').innerText = data[branch].address;
             document.getElementById('phone').innerText = data[branch].phone;
-            document.getElementById('email').innerText = data[branch].email;
+            document.getElementById('phone').innerText = data[branch].phone;
+            document.getElementById('mobil').innerText = data[branch].mobil;
             document.getElementById('navigation').href = data[branch].nav;
         }
     </script>
