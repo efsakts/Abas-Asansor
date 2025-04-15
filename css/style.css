@@ -498,7 +498,7 @@
 .testimonial-carousel .owl-item .testimonial-text {
     border: 5px solid var(--light);
     transform: scale(.8);
-    transition: .5s;
+    transition: 1.5s;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text {

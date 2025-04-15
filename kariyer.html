@@ -65,121 +65,123 @@
                         <h1 class="display-5 mb-4">İş Başvuru Formu</h1>
                         
                         <p class="mb-4">Lütfen aşağıdaki bilgileri eksiksiz doldurunuz.</p>
-                        <form id="applicationForm" action="https://formsubmit.co/efsaaktas@outlook.com" method="POST">
+                        <form id="applicationForm" action="https://formsubmit.co/efsaaktas@outlook.com" method="POST" enctype="multipart/form-data">
+                            
                             <div class="row g-3">
                                 <!-- Başvuru Türü -->
                                 <div class="col-12">
                                     <label class="form-label">Başvuru Türü</label>
-                                    <select class="form-select" id="applicationType" name="applicationType">
+                                    <select class="form-select" id="applicationType" name="Başvuru Türü">
                                         <option selected disabled>Seçiniz...</option>
                                         <option value="Genel Başvuru">Genel Başvuru</option>
                                         <option value="Staj Başvurusu">Staj Başvurusu</option>
                                     </select>
                                 </div>
-    
+        
                                 <!-- Başvurulan Departman -->
                                 <div class="col-12">
                                     <label class="form-label">Başvurulan Departman</label>
-                                    <select class="form-select" id="department" name="department">
+                                    <select class="form-select" id="department" name="Departman">
                                         <option selected disabled>Seçiniz...</option>
                                         <option value="Satış - Pazarlama">Satış - Pazarlama</option>
                                         <option value="Ön Muhasebe">Ön Muhasebe</option>
                                         <option value="Satınalma">Satın alma</option>
                                         <option value="Teknik Servis">Teknik Servis</option>
                                         <option value="Depo Yönetimi">Depo Yönetimi</option>
+                                        <option value="Diğer">Diğer</option>
                                     </select>
                                 </div>
-    
+        
                                 <!-- Kişisel Bilgiler -->
                                 <div class="col-12">
                                     <h5 class="mt-4">Kişisel Bilgileriniz</h5>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Ad Soyad">
+                                        <input type="text" class="form-control" id="fullName" name="İsim" placeholder="Ad Soyad">
                                         <label for="fullName">Ad Soyad</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="address" name="address" placeholder="Adres">
+                                        <input type="text" class="form-control" id="address" name="Adres" placeholder="Adres">
                                         <label for="address">Adres</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="E-posta">
+                                        <input type="email" class="form-control" id="email" name="Email" placeholder="E-posta">
                                         <label for="email">E-posta</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Telefon">
+                                        <input type="tel" class="form-control" id="phone" name="Telefon" placeholder="Telefon">
                                         <label for="phone">Telefon</label>
                                     </div>
                                 </div>
-    
+        
                                 <!-- Özgeçmiş Ekle -->
                                 <div class="col-12">
                                     <label for="resume" class="form-label">Varsa Özgeçmiş Ekleyiniz (PDF)</label>
-                                    <input type="file" class="form-control" id="resume" name="resume" accept=".pdf">
+                                    <input type="file" class="form-control" id="resume" name="Özgeçmiş" accept=".pdf">
                                 </div>
-    
+        
                                 <!-- Genel Bilgiler -->
                                 <div class="col-12">
                                     <h5 class="mt-4">Genel Bilgiler</h5>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="license" name="license" placeholder="Ehliyet Bilginiz">
+                                        <input type="text" class="form-control" id="license" name="Ehliyet" placeholder="Ehliyet Bilginiz">
                                         <label for="license">Ehliyet Bilginiz</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="certificates" name="certificates" placeholder="Sertifikalarınız">
+                                        <input type="text" class="form-control" id="certificates" name="Sertifikalar" placeholder="Sertifikalarınız">
                                         <label for="certificates">Sertifikalarınız</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="education" name="education" placeholder="Mezun Olduğunuz Okul ve Bölüm">
+                                        <input type="text" class="form-control" id="education" name="Eğitim" placeholder="Mezun Olduğunuz Okul ve Bölüm">
                                         <label for="education">Mezun Olduğunuz Okul ve Bölüm</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="programs" name="programs" placeholder="Kullandığınız Programlar">
+                                        <input type="text" class="form-control" id="programs" name="Kullanılan Programlar" placeholder="Kullandığınız Programlar">
                                         <label for="programs">Kullandığınız Programlar</label>
                                     </div>
                                 </div>
-    
+        
                                 <!-- Referans Bilgileri -->
                                 <div class="col-12">
                                     <h5 class="mt-4">Referans Bilgileriniz</h5>
                                     <p class="small text-muted">(Ad Soyad - Telefon - Çalıştığı Firma - Görevi)</p>
                                     <div class="form-floating">
-                                        <textarea class="form-control" id="references" name="references" placeholder="Referanslarınız" style="height: 100px"></textarea>
+                                        <textarea class="form-control" id="references" name="Referanslar" placeholder="Referanslarınız" style="height: 100px"></textarea>
                                         <label for="references">Referans Bilgileriniz</label>
                                     </div>
                                 </div>
-    
+        
                                 <!-- Neden Firmamızda Çalışmak İstiyorsunuz? -->
                                 <div class="col-12">
                                     <h5 class="mt-4">Neden Firmamızda Çalışmak İstiyorsunuz?</h5>
                                     <div class="form-floating">
-                                        <textarea class="form-control" id="reason" name="reason" placeholder="Neden çalışmak istiyorsunuz?" style="height: 100px"></textarea>
+                                        <textarea class="form-control" id="reason" name="Başvuru Sebebi" placeholder="Neden çalışmak istiyorsunuz?" style="height: 100px"></textarea>
                                         <label for="reason">Neden Firmamızda Çalışmak İstiyorsunuz?</label>
                                     </div>
                                 </div>
-    
+        
                                 <!-- Form Gönderme Butonu -->
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Başvuruyu Gönder</button>
                                 </div>
                             </div>
                         </form>
-    
+        
                         <!-- Success/Error Message -->
                         <div id="responseMessage" style="display: none;"></div>
                     </div>
@@ -188,38 +190,6 @@
         </div>
     </div>
     
-    <script>
-        // Add an event listener to handle form submission
-        document.getElementById('applicationForm').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent page reload
-    
-            // Send the form data using FormSubmit's AJAX method
-            let formData = new FormData(this);
-    
-            fetch('https://formsubmit.co/ajax/efsaaktas@outlook.com', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())  // Parse the response as JSON
-            .then(data => {
-                if (data.success) {
-                    document.getElementById('responseMessage').innerHTML = 'Başvurunuz başarıyla gönderildi!';
-                    document.getElementById('responseMessage').style.display = 'block';
-                    document.getElementById('responseMessage').style.color = 'green';
-                    document.getElementById('applicationForm').reset(); // Reset the form after submission
-                } else {
-                    document.getElementById('responseMessage').innerHTML = 'Bir hata oluştu, lütfen tekrar deneyin.';
-                    document.getElementById('responseMessage').style.display = 'block';
-                    document.getElementById('responseMessage').style.color = 'red';
-                }
-            })
-            .catch(error => {
-                document.getElementById('responseMessage').innerHTML = 'Bir hata oluştu, lütfen tekrar deneyin.';
-                document.getElementById('responseMessage').style.display = 'block';
-                document.getElementById('responseMessage').style.color = 'red';
-            });
-        });
-    </script>
     
 
 
