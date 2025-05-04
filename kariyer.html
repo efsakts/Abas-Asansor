@@ -174,7 +174,24 @@
                                         <label for="reason">Neden Firmamızda Çalışmak İstiyorsunuz?</label>
                                     </div>
                                 </div>
-        
+                                
+    
+                                <div class="col-12">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="kvkkCheck" required>
+                                        <label class="form-check-label" for="kvkkCheck">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#kvkkModal" style="color: #007bff; text-decoration: underline;">KVKK metnini</a> okudum ve onaylıyorum.
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" id="acikRizaCheck" required>
+                                        <label class="form-check-label" for="acikRizaCheck">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#acikRizaModal" style="color: #007bff; text-decoration: underline;">Açık rıza metnini</a> okudum ve onaylıyorum.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                  
                                 <!-- Form Gönderme Butonu -->
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Başvuruyu Gönder</button>
@@ -183,7 +200,78 @@
                             <input type="hidden" name="_subject" value="Kariyer Formu">
 
                         </form>
-        
+                          
+                        <!-- KVKK Modal -->
+                        <div class="modal fade" id="kvkkModal" tabindex="-1" aria-labelledby="kvkkModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="kvkkModalLabel">KVKK Metni</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p><strong>Abaş Asansör Anonim Şirketi Kişisel Verilerin İşlenmesi Hakkında Aydınlatma Metni</strong></p>
+                                    <p>Tarafımıza iletmiş olduğunuz iş/staj başvuru formu kapsamında, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca Veri Sorumlusu sıfatıyla, kişisel verilerinizi aşağıdaki şekilde işliyor ve koruyoruz.</p>
+                                    
+                                    <p><strong>1. İşlenen Kişisel Veriler</strong></p>
+                                    <p>İş Başvuru formunda tarafınızca paylaşılan aşağıdaki kişisel veriler işlenmektedir:</p>
+                                    <ul>
+                                      <li>Başvurulan Departman ve Türü (İş / Staj)</li>
+                                      <li>Kimlik Bilgileri (Ad, Soyad)</li>
+                                      <li>İletişim Bilgileri (Telefon, E-posta, Adres)</li>
+                                      <li>Eğitim Bilgileri (Okul, Bölüm)</li>
+                                      <li>Mesleki Deneyim ve Sertifikalar</li>
+                                      <li>Ehliyet Bilgisi</li>
+                                      <li>Referans Bilgileri</li>
+                                      <li>Kullandığınız Programlar ve Yetkinlikler</li>
+                                      <li>CV/Özgeçmiş dosyası</li>
+                                      <li>Neden firmamızda çalışmak istediğinize dair bilgiler</li>
+                                    </ul>
+                            
+                                    <p><strong>2. Kişisel Verilerin İşlenme Amaçları</strong></p>
+                                    <p>Toplanan kişisel verileriniz;</p>
+                                    <ul>
+                                      <li>İşe alım ve değerlendirme süreçlerinin yürütülmesi</li>
+                                      <li>Başvuruların değerlendirilmesi ve iletişim kurulması</li>
+                                      <li>İlgili pozisyonlara uygunluk analizinin yapılması</li>
+                                    </ul>
+                            
+                                    <p><strong>3. Kişisel Verilerin Aktarımı</strong></p>
+                                    <p>Kişisel verileriniz, yalnızca yukarıdaki amaçlar doğrultusunda, gerektiğinde ilgili birimlerle sınırlı kalmak kaydıyla kurum içinde paylaşılabilir. Üçüncü taraflarla paylaşımı söz konusu olduğunda, açık rızanız alınacaktır.</p>
+                            
+                                    <p><strong>4. Saklama Süresi</strong></p>
+                                    <p>Başvurularınız değerlendirme süreci boyunca saklanır, uygun pozisyon bulunmaması halinde en fazla 3 yıl süreyle muhafaza edilir ve sonrasında imha edilir. Daha uzun süreli saklama için ayrıca açık rızanız alınır.</p>
+                            
+                                    <p><strong>5. KVKK Kapsamındaki Haklarınız</strong></p>
+                                    <p>KVKK’nın 11. maddesi kapsamında; kişisel verilerinize ilişkin bilgi talep etme, düzeltilmesini veya silinmesini isteme, itiraz etme gibi haklara sahipsiniz. Taleplerinizi yazılı olarak veya kurumun belirttiği e-posta adresi üzerinden iletebilirsiniz.</p>
+                                  </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Açık Rıza Modal -->
+                        <div class="modal fade" id="acikRizaModal" tabindex="-1" aria-labelledby="acikRizaModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="acikRizaModalLabel">Açık Rıza Metni</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                                </div>
+                                <div class = "modal-body">
+                                <p>Tarafınıza ilettiğim kişisel verilerimin, yalnızca başvurduğum pozisyon kapsamında değil, ileride oluşabilecek uygun iş/staj olanaklarında da değerlendirilmek üzere tarafınızca 3 (üç) yıl süreyle güvenli bir şekilde saklanmasına, gerektiğinde sadece insan kaynakları birimi yetkilileriyle sınırlı olmak kaydıyla paylaşılmasına ve bu süreçlerin yürütülmesi amacıyla işlenmesine açık rıza veriyorum.
+                                </p>  
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+  
                         <!-- Success/Error Message -->
                         <div id="responseMessage" style="display: none;"></div>
                     </div>

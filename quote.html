@@ -101,6 +101,16 @@
                                         <textarea class="form-control border-0" name="Detaylar" placeholder="İhtiyacınızı Detaylandırın" style="height: 150px;" required></textarea>
                                     </div>
                             
+                                    <div class="col-12">
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="kvkkCheck" required>
+                                            <label class="form-check-label" for="kvkkCheck">
+                                                <a href="#" data-bs-toggle="modal" data-bs-target="#kvkkModal" style="color: #007bff; text-decoration: underline;">KVKK metnini</a> okudum ve onaylıyorum.
+                                            </label>
+                                        </div>
+                                        
+                                    </div>
+
                                     <!-- Gönder Button -->
                                     <div class="col-12">
                                         <button class="btn btn-primary w-100 py-3" type="submit">Gönder</button>
@@ -108,6 +118,65 @@
                                 </div>
                                 <input type="hidden" name="_subject" value="Teklif Al Formu">
                             </form>
+
+                            <div class="modal fade" id="kvkkModal" tabindex="-1" aria-labelledby="kvkkModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="kvkkModalLabel">Abaş Asansör Anonim Şirketi Kişisel Verilerin İşlenmesi Hakkında Aydınlatma Metni</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <p><strong>Tarafımıza iletmiş olduğunuz teklif alma formu ve iletişim formu kapsamında, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca Veri Sorumlusu sıfatıyla, kişisel verilerinizi aşağıdaki şekilde işliyor ve koruyoruz.</strong></p>
+                                    
+                                    <h6>1. İşlenen Kişisel Veriler</h6>
+                                    <p>Formlar aracılığıyla aşağıdaki kişisel veriler işlenmektedir:</p>
+                            
+                                
+                                    <ul>
+                                        <li>Ad Soyad</li>
+                                        <li>E-posta Adresi</li>
+                                        <li>Telefon Numarası</li>
+                                        <li>Talep Edilen Hizmet/Servis Seçenekleri</li>
+                                        <li>İhtiyaç/Proje Detayları (mesaj içeriği)</li>
+                                    </ul>
+                            
+                                    <h6>2. Kişisel Verilerin İşlenme Amaçları</h6>
+                                    <p>Toplanan kişisel verileriniz;</p>
+                                    <ul>
+                                        <li>Talep ve mesajlarınıza dönüş sağlanması</li>
+                                        <li>Teklif taleplerinin değerlendirilmesi ve yanıtlanması</li>
+                                        <li>Sizinle iletişime geçilmesi</li>
+                                        <li>İlgili iç süreçlerin yürütülmesi ve kayıt altına alınması</li>
+                                    </ul>
+                            
+                                    <h6>3. Verilerin Toplanma Yöntemi ve Hukuki Sebebi</h6>
+                                    <p>Kişisel verileriniz, web sitemizde yer alan iletişim ve teklif formlarının doldurulması suretiyle elektronik ortamda elde edilmekte olup;</p>
+                                    <ul>
+                                        <li><strong>KVKK madde 5/2-c:</strong> Bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması (örneğin teklif sunma)</li>
+                                        <li><strong>KVKK madde 5/2-f:</strong> İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla veri sorumlusunun meşru menfaati</li>
+                                    </ul>
+                                    <p>hukuki sebeplerine dayanarak işlenmektedir.</p>
+                            
+                                    <h6>4. Verilerin Aktarımı</h6>
+                                    <p>Kişisel verileriniz, yukarıda belirtilen amaçlarla sınırlı olmak üzere;</p>
+                                    <ul>
+                                        <li>İlgili departman çalışanlarıyla</li>
+                                        <li>Gerekli durumlarda hizmet aldığımız teknik destek ve altyapı sağlayıcı firmalarla</li>
+                                    </ul>
+                                    <p>paylaşılabilir. Yurt dışına veri aktarımı yapılmamaktadır.</p>
+                            
+                                    <h6>5. KVKK Kapsamındaki Haklarınız</h6>
+                                    <p>KVKK’nın 11. maddesi kapsamında; kişisel verilerinize ilişkin bilgi talep etme, düzeltilmesini veya silinmesini isteme, itiraz etme gibi haklara sahipsiniz. Taleplerinizi yazılı olarak veya kurumun belirttiği e-posta adresi üzerinden iletebilirsiniz.</p>
+                                    
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+      
                             
                             <!-- Success/Error Message -->
                             <div id="responseMessage" style="display: none;"></div>
