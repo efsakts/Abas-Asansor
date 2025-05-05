@@ -65,7 +65,7 @@
                         <h1 class="display-5 mb-4">İş Başvuru Formu</h1>
                         
                         <p class="mb-4">Lütfen aşağıdaki bilgileri eksiksiz doldurunuz.</p>
-                        <form id="applicationForm" action="https://formsubmit.co/abasasansor@gmail.com" method="POST" enctype="multipart/form-data">
+                        <form id="applicationForm" action="https://formsubmit.co/abasasansor@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="addTimestamp()">
                             
                             <div class="row g-3">
                                 <!-- Başvuru Türü -->
@@ -77,7 +77,7 @@
                                         <option value="Staj Başvurusu">Staj Başvurusu</option>
                                     </select>
                                 </div>
-        
+                
                                 <!-- Başvurulan Departman -->
                                 <div class="col-12">
                                     <label class="form-label">Başvurulan Departman</label>
@@ -91,7 +91,7 @@
                                         <option value="Diğer">Diğer</option>
                                     </select>
                                 </div>
-        
+                
                                 <!-- Kişisel Bilgiler -->
                                 <div class="col-12">
                                     <h5 class="mt-4">Kişisel Bilgileriniz</h5>
@@ -120,13 +120,13 @@
                                         <label for="phone">Telefon</label>
                                     </div>
                                 </div>
-        
+                
                                 <!-- Özgeçmiş Ekle -->
                                 <div class="col-12">
                                     <label for="resume" class="form-label">Varsa Özgeçmiş Ekleyiniz (PDF)</label>
                                     <input type="file" class="form-control" id="resume" name="Özgeçmiş" accept=".pdf">
                                 </div>
-        
+                
                                 <!-- Genel Bilgiler -->
                                 <div class="col-12">
                                     <h5 class="mt-4">Genel Bilgiler</h5>
@@ -155,7 +155,7 @@
                                         <label for="programs">Kullandığınız Programlar</label>
                                     </div>
                                 </div>
-        
+                
                                 <!-- Referans Bilgileri -->
                                 <div class="col-12">
                                     <h5 class="mt-4">Referans Bilgileriniz</h5>
@@ -165,7 +165,7 @@
                                         <label for="references">Referans Bilgileriniz</label>
                                     </div>
                                 </div>
-        
+                
                                 <!-- Neden Firmamızda Çalışmak İstiyorsunuz? -->
                                 <div class="col-12">
                                     <h5 class="mt-4">Neden Firmamızda Çalışmak İstiyorsunuz?</h5>
@@ -174,8 +174,7 @@
                                         <label for="reason">Neden Firmamızda Çalışmak İstiyorsunuz?</label>
                                     </div>
                                 </div>
-                                
-    
+        
                                 <div class="col-12">
                                     <div class="form-check mb-2">
                                         <input class="form-check-input" type="checkbox" id="kvkkCheck" required>
@@ -190,15 +189,18 @@
                                         </label>
                                     </div>
                                 </div>
-
-                                  
+    
+                                <!-- Timestamp and Open Consent in Hidden Fields -->
+                                <input type="hidden" id="timestamp" name="Timestamp">
+                                <input type="hidden" id="acikRizaStatus" name="Açık Rıza Onayı">
+        
                                 <!-- Form Gönderme Butonu -->
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Başvuruyu Gönder</button>
                                 </div>
                             </div>
                             <input type="hidden" name="_subject" value="Kariyer Formu">
-
+    
                         </form>
                           
                         <!-- KVKK Modal -->
@@ -243,44 +245,60 @@
                                     <p>Başvurularınız değerlendirme süreci boyunca saklanır, uygun pozisyon bulunmaması halinde en fazla 3 yıl süreyle muhafaza edilir ve sonrasında imha edilir. Daha uzun süreli saklama için ayrıca açık rızanız alınır.</p>
                             
                                     <p><strong>5. KVKK Kapsamındaki Haklarınız</strong></p>
-                                    <p>KVKK’nın 11. maddesi kapsamında; kişisel verilerinize ilişkin bilgi talep etme, düzeltilmesini veya silinmesini isteme, itiraz etme gibi haklara sahipsiniz. Taleplerinizi yazılı olarak veya kurumun belirttiği e-posta adresi üzerinden iletebilirsiniz.</p>
-                                  </div>
+                                    <p>KVKK’nın 11. maddesi kapsamında; kişisel verilerinize ilişkin bilgi talep etme, düzeltilmesini veya silinmesini isteme, itiraz etme gibi haklara sahipsiniz. Taleplerinizi yazılı olarak veya kurumun belirttiği e-posta adresi üzerinden iletebilirsiniz.</p>                                    <!-- KVKK metni devamı... -->
+                                </div>
                                 <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                </div>
                                 </div>
                             </div>
                             </div>
                         </div>
-                        
+    
                         <!-- Açık Rıza Modal -->
                         <div class="modal fade" id="acikRizaModal" tabindex="-1" aria-labelledby="acikRizaModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg modal-dialog-scrollable">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="acikRizaModalLabel">Açık Rıza Metni</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="acikRizaModalLabel">Açık Rıza Metni</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Tarafınıza ilettiğim kişisel verilerimin, yalnızca başvurduğum pozisyon kapsamında değil, ileride oluşabilecek uygun iş/staj olanaklarında da değerlendirilmek üzere tarafınızca 3 (üç) yıl süreyle güvenli bir şekilde saklanmasına, gerektiğinde sadece insan kaynakları birimi yetkilileriyle sınırlı olmak kaydıyla paylaşılmasına ve bu süreçlerin yürütülmesi amacıyla işlenmesine açık rıza veriyorum.
+                                        </p>        
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                    </div>                                 
+                                    </div>
                                 </div>
-                                <div class = "modal-body">
-                                <p>Tarafınıza ilettiğim kişisel verilerimin, yalnızca başvurduğum pozisyon kapsamında değil, ileride oluşabilecek uygun iş/staj olanaklarında da değerlendirilmek üzere tarafınızca 3 (üç) yıl süreyle güvenli bir şekilde saklanmasına, gerektiğinde sadece insan kaynakları birimi yetkilileriyle sınırlı olmak kaydıyla paylaşılmasına ve bu süreçlerin yürütülmesi amacıyla işlenmesine açık rıza veriyorum.
-                                </p>  
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                                </div>
-                            </div>
                             </div>
                         </div>
-
-  
-                        <!-- Success/Error Message -->
-                        <div id="responseMessage" style="display: none;"></div>
+    
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    
+    <script>
+        // Formun gönderilmeden önce zaman damgasını ekle
+        function addTimestamp() {
+            var timestampField = document.getElementById('timestamp');
+            var acikRizaField = document.getElementById('acikRizaStatus');
+            timestampField.value = new Date().toISOString(); // Zaman damgası (ISO formatında)
+            
+            // Açık rıza durumu
+            var acikRizaCheck = document.getElementById('acikRizaCheck');
+            acikRizaField.value = acikRizaCheck.checked ? 'Evet' : 'Hayır';
+        }
+    </script>
     
     
 
+        
+
+        
 
     <div id="footer"></div> 
     <script>

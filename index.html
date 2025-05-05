@@ -30,6 +30,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    
+
 </head>
 
 <body>
@@ -682,17 +685,137 @@
     
     <!-- sorular end değişiklikkkkkk-->
 
+    
+<!-- <div id="cookie-consent-banner" class="cookie-banner">
+    <div class="cookie-message">
+      <p>Bu sitede çerezler kullanılmaktadır. Daha fazla bilgi için <a href="/cookie-policy">çerez politikamıza</a> göz atın.</p>
+      <button id="accept-cookies" class="cookie-button">Tüm Çerezleri Kabul Et</button>
+      <button id="cookie-settings" class="cookie-button">Çerez Ayarları</button>
+    </div>
+  </div>
+  
+  
+        <div id="cookie-settings-modal" class="cookie-settings-modal">
+            <div class="modal-content">
+            <h2>Çerez Ayarları</h2>
+            <label>
+                <input type="checkbox" id="essential-cookies" disabled checked> Zorunlu Çerezler
+            </label>
+            <div class="accordion">
+                <button class="accordion-button">Zorunlu Çerezler Neyi Kapsar?</button>
+                <div class="panel">
+                <p>Zorunlu çerezler, sitenizin düzgün çalışabilmesi için gereklidir. Bu çerezler, oturum açma bilgilerinizi hatırlamak ve güvenlik özelliklerini sağlamak gibi işlemler için kullanılır.</p>
+                </div>
+            </div>
+            <label>
+                <input type="checkbox" id="analytics-cookies"> Analitik Çerezler
+            </label>
+            <div class="accordion">
+                <button class="accordion-button">Analitik Çerezler Neyi Kapsar?</button>
+                <div class="panel">
+                <p>Analitik çerezler, web sitemizi nasıl kullandığınızı izler. Bu veriler, siteyi daha iyi hale getirmek için analiz edilir. Örneğin, Google Analytics gibi araçlarla ziyaretçi verileri toplanır.</p>
+                </div>
+            </div>
+            <label>
+                <input type="checkbox" id="advertising-cookies"> Reklam Çerezleri
+            </label>
+            <div class="accordion">
+                <button class="accordion-button">Reklam Çerezleri Neyi Kapsar?</button>
+                <div class="panel">
+                <p>Reklam çerezleri, ilgilendiğiniz ürünleri ve hizmetleri takip ederek size hedefli reklamlar gösterir. Bu çerezler, reklamverenlerin doğru hedeflemeler yapmasına yardımcı olur.</p>
+                </div>
+            </div>
+            <button id="save-cookies" class="cookie-button">Ayarları Kaydet</button>
+            </div>
+        </div>
+        
+        <style>
+            .cookie-banner { position: fixed; bottom: 0; width: 100%; background: #333; color: white; padding: 20px; text-align: center; }
+            .cookie-button { margin: 5px; background-color: #f1d600; color: black; padding: 10px; border: none; cursor: pointer; }
+            .cookie-settings-modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 30px; border: 1px solid #ccc; width: 80%; max-width: 600px; }
+            .accordion { margin-top: 10px; }
+            .accordion-button { background-color: #f1d600; color: black; padding: 10px; width: 100%; text-align: left; border: none; cursor: pointer; }
+            .panel { padding: 0 10px; display: none; overflow: hidden; background-color: #f1f1f1; }
+        </style>
+        
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const cookieConsentBanner = document.getElementById("cookie-consent-banner");
+                const cookieSettingsModal = document.getElementById("cookie-settings-modal");
+                const acceptCookiesBtn = document.getElementById("accept-cookies");
+                const cookieSettingsBtn = document.getElementById("cookie-settings");
+                const saveCookiesBtn = document.getElementById("save-cookies");
+              
+                // Çerez tercihlerini kontrol et
+                if (!localStorage.getItem("cookiesAccepted")) {
+                  cookieConsentBanner.style.display = "block";
+                }
+              
+                // Çerezleri kabul et butonuna tıklandığında
+                acceptCookiesBtn.addEventListener("click", function() {
+                  localStorage.setItem("cookiesAccepted", "true");
+                  localStorage.setItem("analyticsCookies", "true");
+                  localStorage.setItem("advertisingCookies", "true");
+                  cookieConsentBanner.style.display = "none";
+                });
+              
+                // Çerez ayarlarını aç butonuna tıklandığında
+                cookieSettingsBtn.addEventListener("click", function() {
+                  cookieSettingsModal.style.display = "block";
+                  document.getElementById("analytics-cookies").checked = localStorage.getItem("analyticsCookies") === "true";
+                  document.getElementById("advertising-cookies").checked = localStorage.getItem("advertisingCookies") === "true";
+                });
+              
+                // Çerez ayarlarını kaydet butonuna tıklandığında
+                saveCookiesBtn.addEventListener("click", function() {
+                  localStorage.setItem("analyticsCookies", document.getElementById("analytics-cookies").checked);
+                  localStorage.setItem("advertisingCookies", document.getElementById("advertising-cookies").checked);
+                  cookieSettingsModal.style.display = "none";
+                });
+              
+                // Accordion işlevselliği
+                const accordions = document.querySelectorAll('.accordion-button');
+                accordions.forEach((accordion) => {
+                  accordion.addEventListener('click', function() {
+                    const panel = this.nextElementSibling;
+                    panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+                  });
+                });
+              });
+              
+              
+        </script>
+
+        <script>
+            if (localStorage.getItem("analyticsCookies") === "true") {
+                // Analitik çerezleri yükle
+                // Örneğin, Google Analytics entegrasyonu
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                ga('create', 'UA-XXXXX-Y', 'auto');
+                ga('send', 'pageview');
+              }
+              
+              if (localStorage.getItem("advertisingCookies") === "true") {
+                // Reklam çerezlerini yükle
+                // Örneğin, Google Ads entegrasyonu
+              }
+              
+        </script>
+   -->
 
 
-
-    <div id="footer"></div>
-    <script>
-        fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-    </script>
+   <div id="footer"></div> 
+   <script>
+       fetch('footer.html')
+       .then(response => response.text())
+       .then(data => {
+           document.getElementById('footer').innerHTML = data;
+       });
+   </script>
 
 
     <!-- Back to Top -->
